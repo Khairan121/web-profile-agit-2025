@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#menuBtn.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px) !important;
+}
+
+#menuBtn.open .bar:nth-child(2) {
+  opacity: 0 !important;
+}
+
+#menuBtn.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px) !important;
+}
+
+

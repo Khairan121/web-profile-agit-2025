@@ -32,13 +32,13 @@
     <nav id="navbar"
         class="w-full h-[64px] fixed top-0 left-0 z-50 transition-all duration-500 ease-in-out text-[#040404]">
         <div id="navbarChild"
-            class="h-full w-full flex justify-between items-center p-5 lg:px-64 transition-all duration-500 ease-in-out">
+            class="h-full w-full flex justify-between items-center p-5 md:px-64 transition-all duration-500 ease-in-out">
             <div id="navLogo" class="transition-all duration-500 ease-in-out">
                 <a href="#main" class="text-2xl font-bold">&lt;khai/&gt;</a>
             </div>
 
 
-            <div id="navMenu" class="hidden lg:flex lg:w-full lg:justify-end p-0 m-0 lg:gap-10">
+            <div id="navMenu" class="hidden md:flex md:w-full md:justify-end p-0 m-0 md:gap-10">
                 <a href="#main"
                     class="hover:bg-[#040404] rounded-full px-2 hover:text-[#f2f2f2] transition-all duration-500 ease-in-out">Home</a>
                 <a href="#about"
@@ -49,7 +49,7 @@
                     class="hover:bg-[#040404] rounded-full px-2 hover:text-[#f2f2f2] transition-all duration-500 ease-in-out">Contact</a>
             </div>
 
-            <div class="relative lg:hidden inline-block">
+            <div class="relative md:hidden inline-block">
                 <button id="hamburger" class="text-2xl select-none transition-all duration-500 ease-in-out">
                     ☰
                 </button>
@@ -63,7 +63,7 @@
         </div>
 
         <div id="menuMobile"
-            class="lg:hidden max-h-0 opacity-0 overflow-hidden w-full flex flex-col justify-center items-center gap-5 py-0 transition-all duration-500 ease-in-out z-50">
+            class="md:hidden max-h-0 opacity-0 overflow-hidden w-full flex flex-col justify-center items-center gap-5 py-0 transition-all duration-500 ease-in-out z-50">
             <a href="#main">Home</a>
             <a href="#about">About</a>
             <a href="">Projects</a>
@@ -74,33 +74,33 @@
 
     <!-- Main Section -->
     <main id="main" class="w-full h-[8000px] flex flex-col items-center bg-[#040404] ">
-        <section class="w-full h-screen bg-[url('hero-2.jpg')] bg-center bg-cover bg-no-repeat px-5 lg:px-64">
-            <div class="w-full h-screen lg:h-full flex flex-col justify-center items-center gap-10 lg:gap-0">
-                <div class="w-full h-fit lg:h-1/2 flex flex-col justify-center items-center gap-5 lg:gap-10">
+        <section class="w-full h-screen bg-[url('hero-2.jpg')] bg-center bg-cover bg-no-repeat px-5 md:px-64">
+            <div class="w-full h-screen md:h-full flex flex-col justify-center items-center gap-10 md:gap-0">
+                <div class="w-full h-fit md:h-1/2 flex flex-col justify-center items-center gap-5 md:gap-10">
                     <h1
-                        class="text-md lg:text-2xl text-neutral-600 font-light tracking-[3px] lg:tracking-[20px] drop-shadow-md fade-down pb-5">
+                        class="text-md md:text-2xl text-neutral-600 font-light tracking-[3px] md:tracking-[10px] drop-shadow-md fade-down pb-5">
                         Design | Develop | Deliver</h1>
-                    <h1 class="text-7xl lg:text-9xl font-bold drop-shadow-md fade-down text-[#040404]">&lt;khai/&gt;
+                    <h1 class="text-7xl md:text-9xl font-bold drop-shadow-md fade-down text-[#040404]">&lt;khai/&gt;
                     </h1>
-                    <p class="text-2xl lg:text-5xl tracking-widest fade-down text-[#040404]">I'm a <span
+                    <p class="text-2xl md:text-5xl tracking-widest fade-down text-[#040404]">I'm a <span
                             id="target-text"></span><span id="cursor" class="animate-ping">|</span></p>
                 </div>
-                <div class="w-full h-fit flex lg:flex-col justify-center lg:justify-center gap-5 items-center py-10 ">
+                <div class="w-full h-fit flex md:flex-col justify-center md:justify-center gap-5 items-center py-10 ">
                     <button
                         class="w-fit h-auto bg-[#f2f2f2] text-[#040404] text-md tracking-widest rounded-md py-1 px-3 border-2 border-[#040404] shadow-lg fade-up animate-bounce">Hire
                         me</button>
                     <button
-                        class="w-fit h-auto bg-[#040404] lg:bg-transparent text-[#f2f2f2] text-md rounded-md py-1 px-3 border-2 border-[#040404] lg:border-transparent shadow-lg lg:shadow-sm fade-up">Wanna
+                        class="w-fit h-auto bg-[#040404] md:bg-transparent text-[#f2f2f2] text-md rounded-md py-1 px-3 border-2 border-[#040404] md:border-transparent shadow-lg md:shadow-sm fade-up">Wanna
                         build a website?</button>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="w-full h-auto flex justify-between px-5 lg:px-64 py-20">
+        <section id="about" class="w-full h-auto flex justify-between px-5 md:px-64 py-20">
             <div>
                 <div class="sticky top-[70px]">
                     <h1
-                        class="text-5xl lg:text-7xl text-[#f2f2f2] fade-right-noreset [writing-mode:vertical-lr] rotate-180 tracking-widest lg:tracking-[10px]">
+                        class="text-5xl md:text-7xl text-[#f2f2f2] fade-right-noreset [writing-mode:vertical-lr] rotate-180 tracking-widest md:tracking-[10px]">
                         About Me
                     </h1>
                 </div>
@@ -110,17 +110,17 @@
             <div class="w-full h-full flex flex-col justify-start gap-[50px] items-center overflow-x-hidden">
                 <div class="w-full h-fit flex gap-1">
                     <div
-                        class="w-full h-[420px] lg:h-[630px] bg-[url('agit-1.jpg')] bg-center bg-cover bg-no-repeat fade-right">
+                        class="w-full h-[420px] md:h-[630px] bg-[url('agit-1.jpg')] bg-center bg-cover bg-no-repeat fade-right">
                     </div>
                     <div
-                        class="w-full h-[420px] lg:h-[630px] bg-[url('agit-3.jpeg')] bg-center bg-cover bg-no-repeat fade-right">
+                        class="w-full h-[420px] md:h-[630px] bg-[url('agit-3.jpeg')] bg-center bg-cover bg-no-repeat fade-right">
                     </div>
                     <div
-                        class="w-full h-[420px] lg:h-[630px] bg-[url('agit-2.jpg')] bg-[-80px_0px] lg:bg-center bg-cover bg-no-repeat fade-right">
+                        class="w-full h-[420px] md:h-[630px] bg-[url('agit-2.jpg')] bg-[-80px_0px] md:bg-center bg-cover bg-no-repeat fade-right">
                     </div>
                 </div>
                 <div class="w-full h-fit flex flex-col text-[#f2f2f2] fade-up gap-2 px-5">
-                    <h1 class="text-2xl tracking-widest lg:tracking-[10px] text-center pb-5">Who am i?</h1>
+                    <h1 class="text-2xl tracking-widest md:tracking-[10px] text-center pb-5">Who am i?</h1>
                     <p class="text-justify indent-8">Hi! I'm Khairan Ghithrif, but you can call me Agit.
                         I'm a Front-End Developer who’s passionate about crafting clean, responsive, and user-friendly
                         websites. I enjoy exploring digital innovation and finding creative ways to bring ideas to life
@@ -140,7 +140,7 @@
                 </div>
 
                 <div class="w-full h-fit flex flex-col justify-center items-center text-[#f2f2f2] fade-up gap-2 px-5">
-                    <h1 class="text-2xl tracking-widest lg:tracking-[10px] text-center pb-5">Carrer Journey</h1>
+                    <h1 class="text-2xl tracking-widest md:tracking-[10px] text-center pb-5">Carrer Journey</h1>
                     <div class="collapse collapse-arrow bg-neutral-800">
                         <input type="radio" name="my-accordion-3" />
                         <div class="collapse-title font-semibold">Freelance Project (Bira Project Manaement) | Front-End
@@ -219,15 +219,15 @@
                 </div>
 
                 <div class="w-full h-fit flex flex-col text-[#f2f2f2] fade-up gap-2 px-5">
-                    <h1 class="text-2xl tracking-widest lg:tracking-[10px] text-center pb-5">Education & Learning Path
+                    <h1 class="text-2xl tracking-widest md:tracking-[10px] text-center pb-5">Education & Learning Path
                     </h1>
-                    <div class="w-full h-auto flex flex-col lg:flex-row gap-10">
+                    <div class="w-full h-auto flex flex-col md:flex-row gap-10">
                         <img src="https://www.yarsi.ac.id/wp-content/uploads/2019/07/cropped-Lambang_Universitas_YARSI.jpg"
-                            alt="" class="w-auto">
-                        <div class="w-full h-auto flex flex-col justify-around">
-                            <h1 class="text-2xl font-bold">YARSI University <br> <span
-                                    class="text-[16px] font-light">Bachelor of Information Technology</span> <br> <span
-                                    class="text-[16px] font-normal">GPA: 3.52/4.00</span></h1>
+                            alt="" class="md:w-1/6 h-auto self-center">
+                        <div class="md:w-5/6 h-auto flex flex-col justify-around gap-5">
+                            <h1 class="text-2xl font-bold leading-5">YARSI University <br> <span
+                                    class="text-[12px] font-light">Bachelor of Information Technology</span> <br> <span
+                                    class="text-[16px] font-bold">GPA: 3.52/4.00</span></h1>
                             <p class="text-justify indent-8">Specialized in Frontend Development, focusing on responsive
                                 and high-performance user interface (UI/UX) software engineering. Acquired a strong
                                 foundational knowledge in network architecture and IT infrastructure, evidenced by
@@ -239,9 +239,9 @@
 
                 <!-- sets of skills -->
                 <div class="w-full h-auto flex flex-col justify-center items-center gap-5 text-[#f2f2f2] fade-right">
-                    <h1 class="text-2xl tracking-widest lg:tracking-[10px]">Set of skills</h1>
+                    <h1 class="text-2xl tracking-widest md:tracking-[10px]">Set of skills</h1>
                     <!-- Slider mobile -->
-                    <div class="swiper w-64 h-64 bg-neutral-950 rounded-full lg:hidden">
+                    <div class="swiper w-64 h-64 bg-neutral-950 rounded-full md:hidden">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide flex justify-center items-center">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
@@ -280,7 +280,7 @@
                     </div>
 
                     <!-- Slider desktop -->
-                    <div class="swiper w-full h-64 hidden lg:block">
+                    <div class="swiper w-full h-64 hidden md:block">
                         <div class="swiper-wrapper flex">
                             <!-- Slides -->
                             <div class="swiper-slide flex justify-around items-center">

@@ -108,13 +108,14 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
-
 document.querySelectorAll(".box").forEach((el) => observer.observe(el));
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
+
+
 
     autoplay: {
         // delay: Jeda waktu sebelum pindah slide berikutnya (dalam milidetik)
@@ -148,6 +149,91 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+
+const swiperFlip = new Swiper('.swiper-flip', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    effect: 'flip',
+    flipEffect: {
+        slideShadows: false,
+    },
+
+    autoplay: {
+        // delay: Jeda waktu sebelum pindah slide berikutnya (dalam milidetik)
+        delay: 2000, // Geser setiap 4 detik (4000ms)
+
+        // disableOnInteraction: Setel ke false agar auto scroll tidak berhenti 
+        // ketika pengguna menyentuh/menggeser slider.
+        disableOnInteraction: false,
+
+        // pauseOnMouseEnter: (Opsional) Jika true, geseran berhenti saat mouse masuk
+        pauseOnMouseEnter: true,
+    },
+
+    // speed: Kecepatan transisi slide (misalnya 1 detik)
+    speed: 800,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+});
+
+const swiperCoverflow = new Swiper('.swiper-coverflow', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+
+    effect: 'coverflow',
+    coverflowEffect: {
+        rotate: 30,
+        slideShadows: false,
+    },
+
+    autoplay: {
+        // delay: Jeda waktu sebelum pindah slide berikutnya (dalam milidetik)
+        delay: 6000, // Geser setiap 4 detik (4000ms)
+
+        // disableOnInteraction: Setel ke false agar auto scroll tidak berhenti 
+        // ketika pengguna menyentuh/menggeser slider.
+        disableOnInteraction: false,
+
+        // pauseOnMouseEnter: (Opsional) Jika true, geseran berhenti saat mouse masuk
+        pauseOnMouseEnter: true,
+    },
+
+    // speed: Kecepatan transisi slide (misalnya 1 detik)
+    speed: 1200,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+});
 
 ScrollReveal().reveal('.fade-down', {
     reset: true,
@@ -197,3 +283,4 @@ ScrollReveal().reveal('.fade-left', {
     easing: 'ease-in-out',
     duration: 800// Efek pergerakan
 });
+

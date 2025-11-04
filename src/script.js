@@ -199,21 +199,10 @@ const swiperCoverflow = new Swiper('.swiper-coverflow', {
 
     effect: 'coverflow',
     coverflowEffect: {
-        rotate: 30,
+        rotate: 40,
         slideShadows: false,
     },
 
-    autoplay: {
-        // delay: Jeda waktu sebelum pindah slide berikutnya (dalam milidetik)
-        delay: 6000, // Geser setiap 4 detik (4000ms)
-
-        // disableOnInteraction: Setel ke false agar auto scroll tidak berhenti 
-        // ketika pengguna menyentuh/menggeser slider.
-        disableOnInteraction: false,
-
-        // pauseOnMouseEnter: (Opsional) Jika true, geseran berhenti saat mouse masuk
-        pauseOnMouseEnter: true,
-    },
 
     // speed: Kecepatan transisi slide (misalnya 1 detik)
     speed: 1200,

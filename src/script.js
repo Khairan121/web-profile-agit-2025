@@ -1,4 +1,5 @@
 
+
 const hamburger = document.getElementById("hamburger");
 const menuMobile = document.getElementById("menuMobile");
 const navbar = document.getElementById("navbar");
@@ -45,6 +46,8 @@ window.addEventListener('scroll', () => {
         hamburger.classList.remove("text-[#f2f2f2]");
     }
 })
+
+// ********* Typing Animation *********
 
 // Array kata-kata yang akan ditampilkan
 const words = ["Frontend Dev", "Web Designer", "UI/UX Designer", "Figma User"];
@@ -100,6 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
     typeWriter();
 });
 
+
+// ********* AOS Jadul *********
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -110,6 +115,8 @@ const observer = new IntersectionObserver((entries) => {
 });
 document.querySelectorAll(".box").forEach((el) => observer.observe(el));
 
+
+// ********* Swiper.js *********
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -148,8 +155,6 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-scrollbar',
     },
 });
-
-
 const swiperFlip = new Swiper('.swiper-flip', {
     // Optional parameters
     direction: 'horizontal',
@@ -191,7 +196,6 @@ const swiperFlip = new Swiper('.swiper-flip', {
         el: '.swiper-scrollbar',
     },
 });
-
 const swiperCoverflow = new Swiper('.swiper-coverflow', {
     // Optional parameters
     direction: 'horizontal',
@@ -224,6 +228,8 @@ const swiperCoverflow = new Swiper('.swiper-coverflow', {
     },
 });
 
+
+// ********* Animate On Scroll *********
 ScrollReveal().reveal('.fade-down', {
     reset: true,
     delay: 200,           // Jeda sebelum animasi mulai (ms)
@@ -233,7 +239,6 @@ ScrollReveal().reveal('.fade-down', {
     easing: 'ease-in-out',
     duration: 700 // Efek pergerakan
 });
-
 ScrollReveal().reveal('.fade-up', {
     reset: true,
     delay: 200,           // Jeda sebelum animasi mulai (ms)
@@ -243,7 +248,6 @@ ScrollReveal().reveal('.fade-up', {
     easing: 'ease-in-out',
     duration: 700// Efek pergerakan
 });
-
 ScrollReveal().reveal('.fade-right', {
     reset: true,
     delay: 50,           // Jeda sebelum animasi mulai (ms)
@@ -253,7 +257,6 @@ ScrollReveal().reveal('.fade-right', {
     easing: 'ease-in-out',
     duration: 800// Efek pergerakan
 });
-
 ScrollReveal().reveal('.fade-right-noreset', {
     delay: 50,           // Jeda sebelum animasi mulai (ms)
     distance: '50px',    // Jarak pergerakan elemen
@@ -262,7 +265,6 @@ ScrollReveal().reveal('.fade-right-noreset', {
     easing: 'ease-in-out',
     duration: 800// Efek pergerakan
 });
-
 ScrollReveal().reveal('.fade-left', {
     reset: true,
     delay: 50,           // Jeda sebelum animasi mulai (ms)
@@ -273,3 +275,57 @@ ScrollReveal().reveal('.fade-left', {
     duration: 800// Efek pergerakan
 });
 
+
+// ********* modal image *********
+document.querySelectorAll('.preview-img').forEach(img => {
+    img.addEventListener('click', () => {
+        // bikin elemen modal baru
+        const modal = document.createElement('div');
+        modal.style.cssText = `
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      `;
+
+        // bikin gambar di dalam modal
+        const bigImg = document.createElement('img');
+        bigImg.src = img.src;
+        bigImg.style.cssText = `
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+        transition: transform 0.2s ease;
+      `;
+
+        // tombol close (X)
+        const closeBtn = document.createElement('span');
+        closeBtn.innerHTML = '&times;';
+        closeBtn.style.cssText = `
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+      `;
+
+        // masukkan semua ke body
+        modal.appendChild(bigImg);
+        modal.appendChild(closeBtn);
+        document.body.appendChild(modal);
+
+        // tutup modal pas klik luar gambar atau tombol X
+        modal.addEventListener('click', e => {
+            if (e.target === modal || e.target === closeBtn) {
+                modal.remove();
+            }
+        });
+    });
+});

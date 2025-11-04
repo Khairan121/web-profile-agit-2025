@@ -241,7 +241,7 @@ ScrollReveal().reveal('.fade-down', {
 });
 ScrollReveal().reveal('.fade-up', {
     reset: true,
-    delay: 200,           // Jeda sebelum animasi mulai (ms)
+    delay: 100,           // Jeda sebelum animasi mulai (ms)
     distance: '50px',    // Jarak pergerakan elemen
     origin: 'bottom',    // Elemen 'muncul' dari bawah
     interval: 100,       // Jeda antar elemen (untuk membuat efek berurutan)
@@ -329,3 +329,5 @@ document.querySelectorAll('.preview-img').forEach(img => {
         });
     });
 });
+
+

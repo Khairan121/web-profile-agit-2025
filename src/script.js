@@ -241,10 +241,10 @@ ScrollReveal().reveal('.fade-down', {
 });
 ScrollReveal().reveal('.fade-up', {
     reset: true,
-    delay: 100,           // Jeda sebelum animasi mulai (ms)
+    delay: 10,           // Jeda sebelum animasi mulai (ms)
     distance: '50px',    // Jarak pergerakan elemen
     origin: 'bottom',    // Elemen 'muncul' dari bawah
-    interval: 100,       // Jeda antar elemen (untuk membuat efek berurutan)
+    interval: 50,       // Jeda antar elemen (untuk membuat efek berurutan)
     easing: 'ease-in-out',
     duration: 700// Efek pergerakan
 });
@@ -328,6 +328,35 @@ document.querySelectorAll('.preview-img').forEach(img => {
             }
         });
     });
+});
+
+
+const loader = document.getElementById('loader');
+const modal = document.getElementById('successModal');
+const closeModal = document.getElementById('closeModal');
+
+// Fungsi umum untuk dua form
+function handleFormSubmit(formId) {
+  const form = document.getElementById(formId);
+  form.addEventListener('submit', () => {
+    loader.classList.remove('hidden');
+
+    setTimeout(() => {
+      loader.classList.add('hidden');
+      modal.classList.remove('hidden');
+      modal.classList.add('opacity-100');
+      form.reset();
+    }, 2000);
+  });
+}
+
+// Aktifkan untuk kedua form
+handleFormSubmit('formWebsite');
+handleFormSubmit('formHire');
+
+closeModal.addEventListener('click', () => {
+  modal.classList.add('hidden');
+  modal.classList.remove('opacity-100');
 });
 
 

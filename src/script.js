@@ -241,7 +241,7 @@ ScrollReveal().reveal('.fade-down', {
 });
 ScrollReveal().reveal('.fade-up', {
     reset: true,
-    delay: 10,           // Jeda sebelum animasi mulai (ms)
+    delay: 200,           // Jeda sebelum animasi mulai (ms)
     distance: '50px',    // Jarak pergerakan elemen
     origin: 'bottom',    // Elemen 'muncul' dari bawah
     interval: 50,       // Jeda antar elemen (untuk membuat efek berurutan)
